@@ -76,3 +76,20 @@ console.log(mark.calcBMI())
 console.log(john.calcBMI())
 
 console.log(mark.BMI, john.BMI)
+
+
+// FOR LOOPS
+
+// for (initial value of counter, condition where loop continues as long as it is true, update counter)  
+
+for(let repetition = 1; repetition <= 10; repetition++) {
+	console.log(`Lifting weights, repetition #${repetition}`);
+}
+
+for(let rep = 1; rep <= 10; rep++) {
+	console.log(`Lifting weights, repetition #${rep}`);
+}
+
+for(let i = 1; i <= 10; i++) {
+	console.log(`Lifting weights, repetition #${i}`);
+}
