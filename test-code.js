@@ -93,3 +93,52 @@ for(let rep = 1; rep <= 10; rep++) {
 for(let i = 1; i <= 10; i++) {
 	console.log(`Lifting weights, repetition #${i}`);
 }
+
+// LOOP THROUGH ARRAY
+
+const chrisArray = [
+	"Chris",
+	"Ninman",
+	1984,
+	"software developer",
+	["Matteo", "Kiran", "Ella"],
+	true
+]
+
+for (let i = 0; i < chrisArray.length ; i++) {
+	console.log(chrisArray[i] + ', ' + typeof chrisArray[i])
+}
+
+
+// CREATE NEW ARRAY WITH LOOP
+const types = []
+const types2 = []
+
+for (let i = 0; i < chrisArray.length ; i++) {
+	types[i] = typeof chrisArray[i]
+}
+
+// OR
+
+for (let i = 0; i < chrisArray.length ; i++) {
+	types2.push(typeof chrisArray[i])
+}
+
+console.log(types);
+console.log('with push', types2);
+
+const years = [1997, 2010, 1987, 2019]
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+	ages.push(2022 - years [i])
+}
+
+console.log("ages: ", ages);
+
+// CONTINUE AND BREAK
+// continue immediately exits current iteration and goes to next loop
+// if (typeof chrisArray[i] !== 'string') continue;
+
+//break leave the loop
+//  if (typeof chrisArray[i] === 'number') break;
