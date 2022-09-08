@@ -34,3 +34,45 @@ console.log(chris.thisCalcAge(1984));
 console.log(chris['calcAge'](1984));
 
 console.log(chris.getSummary());
+
+const john = {
+	firstName: 'John',
+	lastName: 'Smith',
+	mass: 92,
+	height: 1.95,
+	calcBMI: function () {
+		this.BMI = this.mass / this.height ** 2
+		return this.BMI
+	}
+}
+
+const mark = {
+	firstName: 'Mark',
+	lastName: 'Miller',
+	mass: 78,
+	height: 1.69,
+	calcBMI: function () {
+		this.BMI = this.mass / this.height ** 2
+		return this.BMI
+	}
+}
+
+
+// need to call these methods to the values
+mark.calcBMI()
+john.calcBMI()
+
+// if (mark.calcBMI() > john.calcBMI()) {
+if (mark.BMI > john.BMI) {
+	console.log(`${mark.firstName} ${mark.lastName}'s BMI(${mark.BMI}) is higher than ${john.firstName} ${john.lastName}'s BMI (${john.BMI})'`);
+} else if (john.BMI > mark.BMI) {
+	console.log('John you so fat');
+} else {
+	console.log('2 big tubbies');
+}
+
+
+console.log(mark.calcBMI())
+console.log(john.calcBMI())
+
+console.log(mark.BMI, john.BMI)
