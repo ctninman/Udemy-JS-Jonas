@@ -192,3 +192,52 @@ while (diceRoll !== 6) {
 		console.log(`You rolled a 6. Loop ending...`);
 	}
 }
+
+// FOR LOOP CALCULATE TIPS CHALLENGE
+
+// 1. Create bills array with 10 test values
+// 2. Create empty array for tips and totals
+// 3. Use 'calculateTip' function (bill + tip) for each bill in array with for loop
+
+let allBills = [22,295, 66,68,95,132,202,312,77,59];
+let tipsAndTotals = [];
+
+function calculateTip (amount) {
+	return amount * 0.15
+}
+
+function calculateTipPlusTotal (amount) {
+	return amount * 1.15
+}
+
+for (let i = 0; i < allBills.length; i ++) {
+	let currentTip = calculateTip(allBills[i])
+	tipsAndTotals.push(currentTip)
+}
+console.log(tipsAndTotals);
+
+let sum = 0
+
+for (let i = 0; i < allBills.length; i++) {
+	let currentBill = calculateTipPlusTotal(allBills[i])
+	sum += currentBill
+	console.log(sum.toFixed(2));
+}
+
+const totalAverage = sum / allBills.length
+console.log(totalAverage);
+// function calculateAverage (amount) {
+// 	return amount * 1.15
+// }
+
+//OR 
+
+const calcuAverage = function(arr) {
+	let sum = 0;
+	for (let i = 0; i < arr.length; i++) {
+		sum += arr[i];
+	}
+	return sum / arr.length;
+}
+
+console.log(calcuAverage(allBills));
