@@ -142,3 +142,53 @@ console.log("ages: ", ages);
 
 //break leave the loop
 //  if (typeof chrisArray[i] === 'number') break;
+
+
+
+const ninmanArray = [
+	"Chris",
+	"Ninman",
+	1984,
+	"software developer",
+	["Matteo", "Kiran", "Ella"],
+	true
+]
+
+// LOOP IN REVERSE
+for (let i = ninmanArray.length - 1; i >= 0; i--) {
+	console.log(i, ninmanArray[i]);
+}
+
+// LOOP INSIDE A LOOP
+for (let exercise = 1; exercise < 4; exercise++) {
+	console.log(`--- Starting exercise ${exercise}`);
+	for(let rep = 1; rep < 6; rep++) {
+		console.log(`Lifting weight repetition ${rep}`);
+	}
+}
+
+// WHILE LOOP
+let rep = 1
+
+while (rep <=10) {
+	console.log(`Lifting rep ${rep}`);
+	rep++
+}
+
+
+
+for (i = 1; i < 20; i++) {
+	let dice = Math.trunc(Math.random() * 6) + 1; 
+	console.log('dice roll = ', dice);
+}
+
+// while dice is not 6, reroll
+// while works when you don't know how many times loop will run
+let diceRoll = Math.trunc(Math.random() * 6) + 1;
+while (diceRoll !== 6) {
+	console.log(`You rolled a ${diceRoll}`);
+	diceRoll = Math.trunc(Math.random() * 6) + 1;
+	if (diceRoll === 6) {
+		console.log(`You rolled a 6. Loop ending...`);
+	}
+}
