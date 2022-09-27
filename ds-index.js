@@ -28,6 +28,10 @@ const restaurant = {
 		console.log(`RECEIVED: ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} att ${time}.`)
 	},
 
+	orderPasta: function(ing1, ing2, ing3) {
+		console.log(`Let's make a pasta dish with ${ing1}, ${ing2}, and ${ing3}`)
+	},
+
   openingHours: {
     thu: {
       open: 12,
@@ -132,3 +136,12 @@ console.log(...arr1)
 // 5 6
 console.log([...arr1])
 // [5, 6]
+
+// spread operators work on iterables
+// iterables are: arrays, strings, maps, sets
+// NOT OBJECTS
+
+
+const ingredients = [prompt("Let's make pasta! Ingredient 1?"), prompt("Let's make pasta! Ingredient 2?"), prompt("Let's make pasta! Ingredient 3?")]
+
+restaurant.orderPasta(...ingredients)
